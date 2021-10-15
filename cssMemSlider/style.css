@@ -2,4 +2,74 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  list-style: none;
+}
+html {
+  font-family: 'Roboto', sans-serif;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.slider {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  background-color: #3FC600; /*#4CAF50*/
+}
+.slider__picture {
+  display: flex;
+  padding: 1rem;
+}
+.slider__picture_item {
+  margin: 0 auto;
+  width: 39%;
+  height: auto;
+}
+.slider__content {
+  /* margin-top: 3rem; */
+}
+.slider__content_caption {
+  font-size: 2vw;
+}
+
+.slider__content_controls {
+  display: flex;
+}
+.controls__item {
+  cursor: pointer;
+  padding: 10px;
+}
+.controls__item > input[type=radio] {
+  display: none;
+  /* cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  background-color:crimson;
+  background-color: #ddd; */
+
+}
+.controls__item > label {
+  display: inline-block;
+	cursor: pointer;
+	position: relative;
+}
+.controls__item > label:before {
+	content: "";
+	display: inline-block;
+	width: 17px;
+	height: 18px;
+	/* position: absolute; */
+	left: 0;
+	bottom: 1px;
+  border-radius: 50%;
+	background: blue 0 0 no-repeat;
+  transition: all 0.5s ease;
+}
+.controls__item input[type=radio]:checked + label:before {
+	background: darkgoldenrod 0 0 no-repeat;
+}
+.controls__item > label:hover::before {
+	background: #473508 0 0 no-repeat;
 }

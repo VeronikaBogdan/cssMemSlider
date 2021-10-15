@@ -5,14 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Slider Mems</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
-      <div class="slider">
-        <div class="slider__picture"></div>
-        <div class="slider__content">
-          <div class="slider__content_caption"></div>
-          <div class="slider__content_controls"></div>
+    <div class="container slider">
+      <div class="slider__picture">
+        <img src="assets/programming.jpg" class="slider__picture_item" alt="photo: programing">
+      </div>
+      <div class="slider__content">
+        <!-- <div class="slider__content_caption"> -->
+          <p class="slider__content_caption">About programmer and  his relationship with programming...</p>
+        <!-- </div> -->
+        <div class="slider__content_controls">
+          <!-- <input type="radio" name="slide" id="" checked>
+          <input type="radio" name="slide" id="" checked>
+          <input type="radio" name="slide" id="" checked>
+          <input type="radio" name="slide" id="" checked> -->
+
+
+          <ul class="slider__content_controls controls">
+            <li class="controls__item">
+              <input type="radio" name="slide1" id="btn1" checked>
+              <label for="btn1"></label>
+            </li>
+            <li class="controls__item">
+              <input type="radio" name="slide1" id="btn2">
+              <label for="btn2"></label>
+            </li>
+            <li class="controls__item">
+              <input type="radio" name="slide1" id="btn3">
+              <label for="btn3"></label>
+            </li>
+            <li class="controls__item">
+              <input type="radio" name="slide1" id="btn4">
+              <label for="btn4"></label>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
