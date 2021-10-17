@@ -57,8 +57,9 @@ html {
   justify-content: space-between;
 }
 .slider__content_caption {
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   padding-left: 1rem;
+  text-align: left;
 }
 
 .slider__content_controls {
@@ -156,12 +157,13 @@ html {
 
 #slides {
 	border-radius: 5px;
-	box-shadow: 1px 1px 4px #666;
+	box-shadow: 0.7rem 0.7rem 1rem #d4d4a5;
 	padding: 1.5rem;
 	background: #ebe854;
 	position: relative;
 	z-index: 1;
   max-width: 70rem;
+  margin-top: 5rem;
 }
 .slide-content {
   color: #333;
@@ -207,11 +209,11 @@ html {
 	color: #FFFFFF;
 }
 #slides .slide_1 {
-  max-width: 50rem;
+  max-width: 52rem;
   margin: 0px 6rem;
 }
 #slides .slide_2 {
-  margin: 0px 6rem 0 5rem;
+  margin: 0px 6rem 0 3rem;
 }
 #slides .slide_3 {
   margin-left: -6rem;
@@ -219,66 +221,38 @@ html {
 #slides .slide_4 {
   margin-left: 0.3rem;
 }
-#controls {
-	margin: -130px 0 0 0;
-	width: 100%;
-	height: 50px;
-	z-index: 3;
-	position: relative;
+
+.slider__bullets {
+  position: relative;
+  bottom: 27vh;
+  z-index: 3;
+	display: flex;
+  justify-content: flex-end;
+  right: 8vw;
 }
 
-#controls label {
-	transition: opacity 0.2s ease-out;
-	display: none;
-	width: 50px;
-	height: 50px;
-	opacity: 0.4;
-}
-#controls label:hover {
-	opacity: 1;
-}
-
-#slide1:checked ~ #controls label:nth-child(2), 
-#slide2:checked ~ #controls label:nth-child(3), 
-#slide3:checked ~ #controls label:nth-child(4), 
-#slide4:checked ~ #controls label:nth-child(5), 
-#slide5:checked ~ #controls label:nth-child(1) {
-	background: url(http://www.withoutjs.com/assets/images/slider/next.png) no-repeat;
-	float: right;
-	margin: 0 -50px 0 0;
-	display: block;
-}
-
-#slide1:checked ~ #controls label:nth-child(5), 
-#slide2:checked ~ #controls label:nth-child(1), 
-#slide3:checked ~ #controls label:nth-child(2), 
-#slide4:checked ~ #controls label:nth-child(3), 
-#slide5:checked ~ #controls label:nth-child(4) {
-	background: url(http://www.withoutjs.com/assets/images/slider/prev.png) no-repeat;
-	float: left;
-	margin: 0 0 0 -50px;
-	display: block;
-}
-
-#bullets {
-	margin: 100px 0 0;
-	text-align: center;
-}
-
-#bullets label {
-	border-radius: 5px;
+.slider__bullets label {
 	display: inline-block;
-	width: 10px;
-	height: 10px;
-	background: #bbb;
+  width: 1.5vw;
+  height: 1.5vw;
+
+  margin: 0.5rem;
+  cursor: pointer;
+
+  border-radius: 50%;
+	background: #52b157;
+  transition: all 0.5s ease;
+}
+.slider__bullets label:hover {
+	background: #838fff;
 }
 
-#slide1:checked ~ #bullets label:nth-child(1), 
-#slide2:checked ~ #bullets label:nth-child(2), 
-#slide3:checked ~ #bullets label:nth-child(3), 
-#slide4:checked ~ #bullets label:nth-child(4),
-#slide5:checked ~ #bullets label:nth-child(5) {
-	background: #333;
+#slide1:checked ~ .slider__bullets label:nth-child(1), 
+#slide2:checked ~ .slider__bullets label:nth-child(2), 
+#slide3:checked ~ .slider__bullets label:nth-child(3), 
+#slide4:checked ~ .slider__bullets label:nth-child(4),
+#slide5:checked ~ .slider__bullets label:nth-child(5) {
+	background: #0a5a0c;
 }
 /* responsive behaviour of controls */
 @media screen and (max-width: 900px) {
