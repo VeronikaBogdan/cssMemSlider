@@ -61,7 +61,7 @@ html {
 }
 
 .slider__content_caption {
-  font-size: 1.3vw;
+  font-size: 1.5vw;
   padding-left: 1rem;
   text-align: left;
 }
@@ -182,6 +182,7 @@ html {
   position: relative;
   z-index: 1;
   max-width: 70rem;
+  max-height: 57rem;
   margin-top: 5rem;
 }
 
@@ -249,9 +250,13 @@ html {
   margin-left: 0.3rem;
 }
 
+.slider__content {
+  max-width: 55rem;
+}
+
 .slider__bullets {
   position: relative;
-  bottom: 27vh;
+  bottom: 14vh;
   z-index: 3;
   display: flex;
   justify-content: flex-end;
@@ -284,7 +289,7 @@ html {
 }
 
 /* responsive behaviour of controls */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 992px) {
 
   #slide1:checked~#controls label:nth-child(5),
   #slide2:checked~#controls label:nth-child(1),
@@ -301,6 +306,105 @@ html {
   #slide5:checked~#controls label:nth-child(1) {
     margin: 0;
   }
+
+  .slider__content {
+    max-width: 55rem;
+  }
+
+  .slider__content_caption {
+    font-size: 2vw;
+    /* padding-left: 1rem;
+  text-align: left; */
+  }
+
+  .slider__bullets {
+    bottom: 14vh;
+    right: 12vw;
+  }
+
+  .slider__bullets label {
+    width: 2vw;
+    height: 2vw;
+    margin: 1rem;
+  }
 }
+
+@media screen and (max-width: 700px) {
+  #slides {
+    margin-top: 0;
+  }
+
+  #slides .slide_2 {
+    margin: 0px 6rem 0 -2rem;
+  }
+
+  .slider__content {
+    width: 45rem;
+  }
+
+  .slider__content_caption {
+    font-size: 3vw;
+  }
+
+  .slider__bullets {
+    bottom: 19vh;
+    right: 2vw;
+  }
+
+  .slider__bullets label {
+    width: 3vw;
+    height: 3vw;
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 552px) {
+  #slides {
+    height: 51rem;
+  }
+  #slides .slide_1 {
+    /* max-width: 0 auto; */
+    margin: 0px 0rem;
+  }
+
+  #slides .slide_2 {
+    max-width: 0 auto;
+    margin: 0px /*6rem*/ 0 3rem;
+  }
+
+  #slides .slide_3 {
+    max-width: 0 auto;
+    margin-left: 0;
+  }
+
+  #slides .slide_4 {
+    max-width: 0 auto;
+    margin-left: 0.3rem;
+  }
+  .slider__picture {
+    height: 41rem;
+  }
+  .slider__content {
+    width: 30rem;
+  }
+  .slider__content_caption {
+    font-size: 4vw;
+    margin-top: 4rem;
+    text-align: center;
+  }
+  .slider__bullets {
+    justify-content: center;
+    bottom: 18vh;
+    right: 0vw;
+  }
+
+  .slider__bullets label {
+    width: 5vw;
+    height: 5vw;
+    margin: 0.5rem;
+  }
+
+}
+
 
 /* end of responsive behaviour of controls */
